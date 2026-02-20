@@ -1,54 +1,75 @@
-/* Banner Section */
-.banner {
+/* Reset default margins and font */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #121212; /* optional dark background for contrast */
+    color: #fff;
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #333;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    overflow: hidden;
+}
+
+nav a {
+    float: left;
+    display: block;
+    color: white;
     text-align: center;
-    margin: 20px 0;
+    padding: 14px 20px;
+    text-decoration: none;
+    transition: background-color 0.3s;
 }
 
-.banner img {
-    width: 90%;
-    max-width: 1200px;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 2px 2px 10px #000;
+nav a:hover {
+    background-color: #575757;
 }
 
-/* About Images - Professional Layout */
+nav a.active {
+    background-color: #04AA6D;
+}
+
+/* Headings and Paragraphs */
+h1, h2 {
+    text-align: center;
+    margin-top: 20px;
+    text-shadow: 1px 1px 2px #000;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: center;
+    margin: 10px 20px;
+}
+
+/* About Images Section */
 .about-images {
     display: flex;
-    justify-content: center;    /* center horizontally */
-    align-items: center;        /* center vertically */
-    gap: 30px;                  /* space between images */
-    flex-wrap: wrap;            /* allow wrapping on small screens */
-    margin: 30px 0;             /* top and bottom spacing */
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin: 30px 0;
 }
 
 .about-images img {
-    width: 180px;               /* smaller, uniform width */
+    width: 180px;               /* Small, uniform size */
     height: auto;
     border-radius: 10px;
     box-shadow: 3px 3px 12px #000;
-    transition: transform 0.3s; /* subtle hover effect */
+    transition: transform 0.3s;
 }
 
 .about-images img:hover {
-    transform: scale(1.05);     /* slightly enlarge on hover */
+    transform: scale(1.05);     /* Subtle hover effect */
 }
 
-/* Contact Image */
-.contact-image {
-    text-align: center;
-    margin: 20px 0;
-}
-
-.contact-image img {
-    width: 80%;
-    max-width: 800px;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 2px 2px 10px #000;
-}
-
-/* Responsive layout for mobile devices */
+/* Responsive for Mobile */
 @media (max-width: 600px) {
     .about-images {
         gap: 20px;
@@ -57,4 +78,12 @@
         width: 100%;
         max-width: 250px;
     }
+}
+
+/* Optional Extra Content */
+.about-text {
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto 40px auto;
+    text-align: center;
 }
