@@ -1,0 +1,50 @@
+/* Reset default margins and font */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Navigation bar */
+nav {
+    background-color: #333;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    overflow: hidden;
+}
+
+/* Navbar links */
+nav a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+/* Hover effect */
+nav a:hover {
+    background-color: #575757;
+}
+
+/* Active page link */
+nav a.active {
+    background-color: #04AA6D;
+}
+
+/* Headings */
+h1 {
+    color: #333;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Paragraphs */
+p {
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: center;
+    margin: 10px 20px;
+}
