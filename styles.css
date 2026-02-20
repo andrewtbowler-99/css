@@ -103,3 +103,15 @@ section h2 {
     margin-bottom: 20px;
 }
 
+/* About page image */
+.about-image {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.about-image img {
+    max-width: 80%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 2px 2px 8px #000;
+}
