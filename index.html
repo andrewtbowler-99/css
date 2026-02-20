@@ -1,69 +1,89 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Home - Baseball Fan Site</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <!-- Navigation -->
-    <nav>
-        <a href="index.html" class="active">Home</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-    </nav>
+/* Reset default margins and font */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #121212; /* optional dark background for contrast */
+    color: #fff;
+}
 
-    <!-- Main Heading -->
-    <h1>Welcome to the Baseball Fan Site!</h1>
-    <p>All the latest stats, news, and highlights from your favorite teams and players.</p>
+/* Navigation Bar */
+nav {
+    background-color: #333;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    overflow: hidden;
+}
 
-    <!-- Banner Image -->
-    <section class="banner">
-        <img src="sunbase.jpg" alt="Baseball Field Banner">
-    </section>
+nav a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
 
-    <!-- Players Section -->
-    <section class="players">
-        <h2>Top Players</h2>
-        <div class="player-cards">
-            <div class="player">
-                <img src="baseball.jpg" alt="Player 1">
-                <p>John Smith - Outfielder</p>
-            </div>
-            <div class="player">
-                <img src="baseballbat.jpg" alt="Player 2">
-                <p>Mike Johnson - Pitcher</p>
-            </div>
-        </div>
-    </section>
+nav a:hover {
+    background-color: #575757;
+}
 
-    <!-- Stats Section -->
-    <section class="stats">
-        <h2>Player Stats</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>Player</th>
-                    <th>Batting Avg</th>
-                    <th>Home Runs</th>
-                    <th>RBIs</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>John Smith</td>
-                    <td>.389</td>
-                    <td>3</td>
-                    <td>36</td>
-                </tr>
-                <tr>
-                    <td>Mike Johnson</td>
-                    <td>.312</td>
-                    <td>5</td>
-                    <td>42</td>
-                </tr>
-            </tbody>
-        </table>
-    </section>
-</body>
-</html>
+nav a.active {
+    background-color: #04AA6D;
+}
+
+/* Headings and Paragraphs */
+h1, h2 {
+    text-align: center;
+    margin-top: 20px;
+    text-shadow: 1px 1px 2px #000;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: center;
+    margin: 10px 20px;
+}
+
+/* About Images Section */
+.about-images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin: 30px 0;
+}
+
+.about-images img {
+    width: 180px;               /* Small, uniform size */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 3px 3px 12px #000;
+    transition: transform 0.3s;
+}
+
+.about-images img:hover {
+    transform: scale(1.05);     /* Subtle hover effect */
+}
+
+/* Responsive for Mobile */
+@media (max-width: 600px) {
+    .about-images {
+        gap: 20px;
+    }
+    .about-images img {
+        width: 100%;
+        max-width: 250px;
+    }
+}
+
+/* Optional Extra Content */
+.about-text {
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto 40px auto;
+    text-align: center;
+}
